@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a
+    href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    target="_blank"
+    style="color: rgb(105, 105, 246); cursor:pointer; word-break: break-all;"
+    data-link="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    onclick="openLink(this)"
+    >https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf</a>
+
+  <script>
+    function openLink(e) {
+      const link = e.dataset.link;
+
+      if (navigator.userAgent.toLowerCase().indexOf("android") !== -1 ) {
+        e.href = encodeURI("https://docs.google.com/gview?embedded=true&url=" + link);
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>
